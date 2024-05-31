@@ -1,0 +1,16 @@
+contract SimpleContract {
+    uint public counter;
+    uint public totalValue;
+
+    function incrementCounter() public {
+        counter += 1;
+    }
+
+    function setTotalValue(uint _value) public {
+        totalValue = _value;
+    }
+
+    function getContractValues() public view returns (uint, uint) {
+        return (counter, totalValue);
+    }
+}
